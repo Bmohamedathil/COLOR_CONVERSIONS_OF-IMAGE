@@ -1,4 +1,9 @@
-# COLOR_CONVERSIONS_OF-IMAGE
+## Developed By : MOHAMED ATHIL B
+## Register No : 212222230081
+## Exp No : 01
+
+#  COLOR_CONVERSIONS_OF-IMAGE
+
 ## AIM
 To write a python program using OpenCV to do the following image manipulations.
 
@@ -36,84 +41,90 @@ Split and Merge RGB Image
 Split and merge HSV Image
 
 ##### Program:
-### Developed By: MOHAMED ATHIL B
-### Register Number: 212222230081
+### Developed By:BALAJI J
+### Register Number: 212221243001
 
 
-## Output:
+
 
 ### i) Read and display the image
-```py
-    import cv2
-    image=cv2.imread('images.jpg',1)
-    image=cv2.resize(image,(400,300))
-    cv2.imshow('natural',image)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
 ```
-## Output:
+import cv2
+image=cv2.imread('vn.jpg',1)
+image=cv2.resize(image,(400,300))
+cv2.imshow('window',image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+## output:
 
-
-![Screenshot 2024-02-22 092247](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/0eb621aa-2159-478d-a410-602ddb5e8251)
+![306840043-461a3195-31ca-4774-93b6-b644001f14d3](https://github.com/user-attachments/assets/7839e6d7-690a-419b-84c9-1d33a0d4f233)
 
 ### ii)Write the image
-```py
-    import cv2
-    image=cv2.imread('images.jpg',0)
-    cv2.imwrite('natural.jpg',image)
 ```
-## Output:
+import cv2
+image=cv2.imread('vn.jpg',0)
+image=cv2.resize(image,(400,300))
+cv2.imwrite('new1.png',image)
+```
+## output:
 
-![write the image](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/9d717855-bb9d-41e6-916f-ac3205453f25)
+![306840803-5eae6982-d795-4697-bc1a-6d38bf0b1e39](https://github.com/user-attachments/assets/6e022e05-de1e-4691-b5a6-b97ef8866952)
+
 
 ### iii)Shape of the Image
-```py
-    import cv2
-    image=cv2.imread('images.jpg',1)
-    print(image.shape)
 ```
-## Output:
-![shape the image](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/46902cb3-9d2f-4729-98a7-b9e04fc95ca2)
+import cv2
+image=cv2.imread('vn.jpg',1)
+print(image.shape)
+```
+## output:
+
+![306841192-900b715a-9043-4cf1-8aba-95c2bd02c339](https://github.com/user-attachments/assets/d94687fa-7002-43fb-a6d2-ba60566e45aa)
+
+
 
 ### iv)Access rows and columns
-```py
-    import random
-    import cv2
-    image=cv2.imread('images.jpg',1)
-    image=cv2.resize(image,(400,400))
-    for i in range (150,200):
-      for j in range(image.shape[1]):
-          image[i][j]=[random.randint(0,255),
-                       random.randint(0,255),
-                       random.randint(0,255)] 
-    cv2.imshow('natural',image)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
 ```
-## Output:
-![access row and column](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/701c00d5-76d0-4a10-a74f-0ba58420a05a)
+import random
+import cv2
+image=cv2.imread('vn.jpg',1)
+image=cv2.resize(image,(400,400))
+for i in range (150,200):
+    for j in range(image.shape[1]):
+        image[i][j]=[random.randint(0,255),random.randint(0,255),random.randint(0,255)] 
+cv2.imshow('WINDOW2',image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+## output
+
+![306840995-399d4529-1d2a-44d6-ad7e-76b9aed483b6](https://github.com/user-attachments/assets/0635c1d8-085c-4ee3-86e4-c46683fd8e0c)
 
 
 
 ### v)Cut and paste portion of image
-```py
-   import cv2
-   image=cv2.imread('images.jpg',1)
-   image=cv2.resize(image,(400,400))
-   tag =image[130:200,110:190]
-   image[110:180,120:200] = tag
-   cv2.imshow('natural',image)
-   cv2.waitKey(0)
-   cv2.destroyAllWindows()
 ```
-## Output:
-![cut and paste](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/2d007fda-b32b-4d5f-a042-e1f685651395)
+import cv2
+image=cv2.imread('vn.jpg',1)
+image=cv2.resize(image,(400,400))
+tag =image[150:200,110:160]
+image[110:160,150:200] = tag
+cv2.imshow('WINDOW3',image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+## output:
+
+![306841319-d610ce3f-34b6-4043-bba0-933152216d1e](https://github.com/user-attachments/assets/1b047f12-39d2-4b97-9050-272e264a3735)
+
+
 
 
 ### vi) BGR and RGB to HSV and GRAY
-```py
+``````
 import cv2
-img = cv2.imread('images.jpg',1)
+img = cv2.imread('vn.jpg',1)
 img = cv2.resize(img,(300,200))
 cv2.imshow('Original Image',img)
 hsv1 = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
@@ -126,108 +137,119 @@ gray2 = cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)
 cv2.imshow('RGB2GRAY',gray2)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-```
-## Output:
-![Screenshot 2024-02-22 093231](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/4bd1f54d-36e3-4278-afc6-1f60481e10e0)
-![Screenshot 2024-02-22 093107](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/0f5e1f37-6217-4248-bdc1-810937b1a6a3)
-![Screenshot 2024-02-22 093131](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/fd2452ac-baed-4ed9-8be3-c9045450ee59)
-![Screenshot 2024-02-22 093145](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/a7e6d7e5-5e1f-4ec2-b794-01536c0e1a22)
+``````
+## output
 
-![Screenshot 2024-02-22 093248](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/a58b623e-bf2d-46be-be6d-1c0d8e0911a0)
+![306842172-f8065f80-69d0-477f-9acb-4ea72b0de4a8](https://github.com/user-attachments/assets/906bfa37-d3d4-4b00-8119-e6e6a2d4a353)
+
+
+
 
 ### vii) HSV to RGB and BGR
-```py
+```
 import cv2
-img = cv2.imread('images.jpg')
+img = cv2.imread('vn.jpg')
 img = cv2.resize(img,(300,200))
+
 img = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 cv2.imshow('Original HSV Image',img)
+
 RGB = cv2.cvtColor(img,cv2.COLOR_HSV2RGB)
 cv2.imshow('2HSV2BGR',RGB)
+
 BGR = cv2.cvtColor(img,cv2.COLOR_HSV2BGR)
 cv2.imshow('HSV2RGB',BGR)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-## Output:
-![Screenshot 2024-02-22 093423](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/cfe68694-7e42-42f6-80f4-74527dcd997c)
-![Screenshot 2024-02-22 093432](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/b113c1bd-c1ae-4206-b6c5-3bcf106255f5)
-![Screenshot 2024-02-22 093440](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/94cf556b-5ce2-4c7e-94e3-7977fc944ad0)
+## output
 
-
+![306842856-69b6555f-3f87-4e3b-ba0a-439950caf5f5](https://github.com/user-attachments/assets/86d951e1-0bcf-44bf-97ed-ac7ec2e1e48e)
 
 
 ### viii) RGB and BGR to YCrCb
-```py
+```
 import cv2
-img = cv2.imread('images.jpg')
+img = cv2.imread('vn.jpg')
 img = cv2.resize(img,(300,200))
 cv2.imshow('Original RGB Image',img)
+
 YCrCb1 = cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)
 cv2.imshow('RGB-2-YCrCb',YCrCb1)
+
 YCrCb2 = cv2.cvtColor(img, cv2.COLOR_RGB2YCrCb)
 cv2.imshow('BGR-2-YCrCb',YCrCb2)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-## Output:
-![Screenshot 2024-02-22 093752](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/d54056a6-12fa-4d52-b7fe-9880b7062b73)
-![Screenshot 2024-02-22 093759](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/51f1c2dd-8728-4787-a73e-b179843ef075)
-![Screenshot 2024-02-22 093811](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/a329b99d-058c-4588-b48d-a904500c7937)
+## output:
 
-
-
+![306843961-049f2621-5752-40a8-87f7-881e9e5e22da](https://github.com/user-attachments/assets/8db1bb47-fa58-4b74-97e4-8123188a4c87)
 
 
 ### ix) Split and merge RGB Image
-```py
+```
 import cv2
-img = cv2.imread('images.jpg',1)
+img = cv2.imread('vn.jpg',1)
 img = cv2.resize(img,(300,200))
+
 R = img[:,:,2]
 G = img[:,:,1]
 B = img[:,:,0]
+
 cv2.imshow('R-Channel',R)
 cv2.imshow('G-Channel',G)
 cv2.imshow('B-Channel',B)
+
 merged = cv2.merge((B,G,R))
 cv2.imshow('Merged RGB image',merged)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-## Output:
-![Screenshot 2024-02-22 094211](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/e1fac2e4-dc15-45f3-98b5-81c65311f33e)
-![Screenshot 2024-02-22 094218](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/77a67c0d-8c8e-412a-b7be-5adfb8d8fc17)
-![Screenshot 2024-02-22 094225](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/551cf5f6-4ea8-46aa-8e5c-5d60898a73e9)
-
-![Screenshot 2024-02-22 094232](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/0195593d-990e-4ec5-8a59-16d3973df9e0)
+## output:
 
 
 
+![306856358-14a25ccd-7480-4e9c-ac4d-ed0176cfdcb5](https://github.com/user-attachments/assets/88d36394-2051-400a-8a02-e52f7209e038)
 
 
 ### x) Split and merge HSV Image
-```py
+
+```
+
 import cv2
-img = cv2.imread("images.jpg",1)
+img = cv2.imread("vn.jpg",1)
 img = cv2.resize(img,(300,200))
 img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+
 H,S,V=cv2.split(img)
+
 cv2.imshow('Hue',H)
 cv2.imshow('Saturation',S)
 cv2.imshow('Value',V)
+
 merged = cv2.merge((H,S,V))
 cv2.imshow('Merged',merged)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-```
-## Output:
-![Screenshot 2024-02-22 094042](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/06d3fe79-5611-494f-be36-7cf48571e65f)
-![Screenshot 2024-02-22 094049](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/f2465292-5dc6-4cef-bd2e-f3afa674dddc)
-![Screenshot 2024-02-22 094056](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/7d5f6dd9-d3a9-4864-9033-973284ce34ae)
-![Screenshot 2024-02-22 094104](https://github.com/AdhithyaMR/COLOR_CONVERSIONS_OF-IMAGE/assets/118834761/608846e6-397f-4ee4-aaa8-16f83f53c916)
+````
+## output:
+
+![306856928-cbc62796-f40c-4a62-8ef4-61088894c10f](https://github.com/user-attachments/assets/4760c485-088a-4a75-a3fb-fb41c4a18fe4)
+
 
 
 
 ## Result:
 Thus the images are read, displayed, and written ,and color conversion was performed between RGB, HSV and YCbCr color models successfully using the python program.
+
+
+
+
+
+
+
