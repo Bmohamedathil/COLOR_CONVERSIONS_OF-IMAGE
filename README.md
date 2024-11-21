@@ -67,7 +67,6 @@ Anaconda - Python 3.7
 ### i)Read and Display an Image
 ```
 import cv2
-import cv2
 img=cv2.imread('ajith.jpg',1)
 cv2.imshow('Image Window', img)
 cv2.waitKey(0)
